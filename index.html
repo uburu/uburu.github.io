@@ -1,0 +1,354 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Систематизм</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">
+    <style type="text/css">
+    	.padd{
+    		padding: 5px;
+    	}
+    	.window{
+    		width: 530px;
+    	}
+      .btn_colors
+      {
+        padding: 40% 40%;
+        margin: 5px 10px;
+      }
+      .blue_light
+      {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #337ab7;
+      }
+      .blue
+      {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .purple
+      {
+        color: #fff;
+        background-color: #d541ff;
+        border-color: #d541ff;
+      }
+      .citrus
+      {
+        color: #fff;
+        background-color: #a4ff3f;
+        border-color: #a4ff3f;
+      }
+      .green
+      {
+        color: #fff;
+        background-color: #01d94c;
+        border-color: #01d94c;
+      }
+      .brown
+      {
+        color: #fff;
+        background-color: #9f4b1e;
+        border-color: #9f4b1e;
+      }
+      .black
+      {
+        color: #fff;
+        background-color: #101010;
+        border-color: #101010;
+      }
+      .orange
+      {
+        color: #fff;
+        background-color: #ff9228;
+        border-color: #ff9228;
+      }
+      .red
+      {
+        color: #fff;
+        background-color: #f50a0c;
+        border-color: #f50a0c;
+      }
+      .light_red
+      {
+        color: #fff;
+        background-color: #ff8cd3;
+        border-color: #ff8cd3;
+      }
+      .light_yellow
+      {
+        color: #fff;
+        background-color: #fdff31;
+        border-color: #fdff31;
+      }
+      .yellow
+      {
+        color: #fff;
+        background-color: #f0d427;
+        border-color: #f0d427;
+      }
+      .light_pink
+      {
+        color: #fff;
+        background-color: #ffc0cc;
+        border-color: #ffc0cc;
+      }
+      .white
+      {
+        color: #fff;
+        background-color: #ffffff;
+        border-color: #0a0a0a;
+      }
+      .dark_blue
+      {
+        color: #fff;
+        background-color: #0000ff;
+        border-color: #0000ff;
+      }
+
+    </style>
+    
+  </head>
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">О приложении</h4>
+              <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
+            </div>
+            <div class="col-sm-3 offset-md-1 py-4">
+              <h4 class="text-white">Контакты</h4>
+              <ul class="list-unstyled">
+                <li><a href="http://www.systematismart.com/" class="text-white">сайт Систематизма</a></li>
+                <li><a href="https://vk.com/id81788584" class="text-white">Разработчик</a></li>
+                <!-- <li><a href="#" class="text-white">Email me</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+            	<circle cx="12" cy="13" r="2"/>
+            	<circle cx="12" cy="13" r="6"/>
+            	<circle cx="12" cy="13" r="10"/>
+            </svg>
+            <strong>Circle</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Цветовые круги</h1>
+          <p class="lead text-muted">Выберете свой цвет и создайте искусство.</p>
+          
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card mb-6 box-shadow">
+              	<div class="card-header">
+			      Цветовая гамма
+			    </div>
+              	
+                
+                <div class="card-body">
+                  
+                  <div class="row">
+
+                  	<div class="col-sm-3 padd">
+                  	  <button type="button" class="btn btn_colors blue_light" onclick="addCir('#337ab7')"></button>
+                    </div>
+                    <div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors purple" onclick="addCir('#d541ff')"></button>
+					</div>
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors citrus" onclick="addCir('#a4ff3f')"></button>
+					</div>
+
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors green" onclick="addCir('#01d94c')"></button>
+					</div>
+        	<div class="col-sm-3 padd">
+        	  <button type="button" class="btn btn_colors brown" onclick="addCir('#9f4b1e')"></button>
+          </div>
+          <div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors black" onclick="addCir('#101010')"></button>
+					</div>
+
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors orange" onclick="addCir('#ff9228')"></button>
+					</div>
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors red" onclick="addCir('#f50a0c')"></button>
+					</div>
+        	<div class="col-sm-3 padd">
+        	  <button type="button" class="btn btn_colors light_red" onclick="addCir('#ff8cd3')"></button>
+          </div>
+
+          <div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors yellow" onclick="addCir('#f0d427')"></button>
+					</div>
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors light_yellow" onclick="addCir('#fdff31')"></button>
+					</div>
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors light_pink" onclick="addCir('#ffc0cc')"></button>
+					</div>
+				  	
+				  
+                  	<!-- <div class="col-md-4 padd">
+                  	  <button type="button" class="btn btn-outline-secondary" onclick="addCir('#d19d90')">Бежевый</button>
+                    </div> -->
+                    <div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors white" onclick="addCir('#ffffff')"></button>
+					</div>
+					<div class="col-sm-3 padd">
+					  <button type="button" class="btn btn_colors dark_blue" onclick="addCir('#0000ff')"></button>
+					</div>
+					<!-- <div class="col-md-4">
+					  <button type="button" class="btn btn-outline-secondary" onclick="addCir('#418949')">Зеленый</button>
+					</div> -->
+
+				  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 window" >
+              <div class="card mb-6 box-shadow window">
+                <div class="card-header">
+			      Цветовые круги                                                    
+			    </div>
+				    <div id="ac_style_samples-gfx-transformation-03" style="display:none;">
+					html, body, #container {
+					    width:   <script>document.write(screen.width * (3/8) * 100)</script>;%;
+					    height: 530px;
+					    margin: 0;
+					    padding: 0;
+					}
+					</div>
+                	<div id="container"></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Наверх</a>
+        </p>
+        <p>Цветовые круги систематизма</p>
+        <p>Более подробную информацию и работы вы сможете можете найти на <a href="http://www.systematismart.com/">сайте</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script>
+	<script>(function(){
+	function ac_add_to_head(el){
+		var head = document.getElementsByTagName('head')[0];
+		head.insertBefore(el,head.firstChild);
+	}
+	function ac_add_link(url){
+		var el = document.createElement('link');
+		el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+		ac_add_to_head(el);
+	}
+	function ac_add_style(css){
+		var ac_style = document.createElement('style');
+		if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+		else ac_style.appendChild(document.createTextNode(css));
+		ac_add_to_head(ac_style);
+	}
+	ac_add_link('https://cdn.anychart.com/releases/8.1.0/css/anychart-ui.min.css');
+	ac_add_style(document.getElementById("ac_style_samples-gfx-transformation-03").innerHTML);
+	ac_add_style(".anychart-embed-samples-gfx-transformation-03{width:1000px;height:1000px;}");
+	})();</script>
+
+
+	<script>
+	var stage = acgraph.create("container");
+	var size = screen.width * (3/8);
+	// create a triangle
+	rect_1 = stage.rect(10, 10, size, size);
+	//triangle = stage.triangleUp(110, 95, 80);
+	//triangle.fill("#d77d31");
+	// rect_1.stroke("#000000");
+	rect_1.stroke(null);
+	// get the triangle center point
+
+	triangleCenterX = rect_1.getBounds().getLeft()+rect_1.getBounds().getWidth()/2;
+	triangleCenterY = rect_1.getBounds().getTop()+rect_1.getBounds().getHeight()/2;
+	max_radius = rect_1.getWidth()/2
+	// create a circle
+
+	circles = [];
+	colours = [];
+
+
+	function addCir(colour)
+	{
+		colours.push(colour);
+		draw_circles(colours);
+	}
+
+
+	function draw_circles(colours)
+	{
+		amount_circles = colours.length
+		for (i = 0; i < amount_circles; i++)
+		{
+			circle = stage.circle(triangleCenterX, triangleCenterY, max_radius * 
+			((amount_circles - i) / amount_circles)  );
+			circle.fill(colours[i]);
+			circle.stroke(null);
+		}
+	}
+	</script>
+  </body>
+</html>
+
+
+
+
