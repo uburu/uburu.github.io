@@ -16,6 +16,7 @@
   border-radius: 5px;
   padding: 50% 50%;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .btn_colors:hover {
