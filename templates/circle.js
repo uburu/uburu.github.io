@@ -23,11 +23,11 @@
 
     function draw_circles(colours)
     {
-      amount_circles = colours.length
+      amount_circles = colours.length;
       for (i = 0; i < amount_circles; i++)
       {
         circle = stage.circle(triangleCenterX, triangleCenterY, max_radius * 
-        ((amount_circles - i) / amount_circles)  );
+        ((amount_circles - i) / amount_circles) );
         circle.fill(colours[i]);
         circle.stroke(null);
       }
