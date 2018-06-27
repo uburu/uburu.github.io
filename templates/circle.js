@@ -60,6 +60,7 @@
       // сначала отрисовываются внешние круги потому что они могут перекрыть внутренние
       out_colours.push(colour);
       draw_out_circles(out_colours);
+      draw_in_circles(colours);
     }
   }
 
