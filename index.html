@@ -57,7 +57,6 @@
     </header>
 
     <main role="main">
-
       <!-- Draw circle -->
       <div class="container screen">
         <div class="row">
@@ -67,10 +66,9 @@
                 <div class="card-header">
                   <h5 class="card-title">Цветовые круги</h5>
                 </div>
-                <div class="card-body">
+                <div id="card-canvas" class="card-body">
                 <!-- Holst -->
-                <div id="ac_style_samples-gfx-transformation-03"></div>
-                <div id="container"></div>
+                  <canvas id="canvas" width="800" height="600" resize>
                 </div>
               </div>
           </div>
@@ -142,7 +140,6 @@
 
         </div>
       </div>
-
     </main>
 
     <footer class="text-muted">
@@ -163,7 +160,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Circle draw core -->
-    <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script>
+    <!-- <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script> -->
+    <script type="text/javascript" src="templates/paper-full.js"></script>
+    <script type="text/javascript" src="templates/jquery.min.js"></script>
     <script src="templates/circle.js"></script>
 
  </body>
