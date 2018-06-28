@@ -86,3 +86,11 @@
 .dark_blue {
   background-color: #0001fc;
 }
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -20px;
+}
