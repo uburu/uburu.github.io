@@ -27,6 +27,20 @@
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">О приложении</h4>
               <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
+              <button class="btn" style="text-align: center;">
+                <img  src="icons/save.png" width="50" height="50" alt>
+              </button>
+              <button class="btn ml-4" style="text-align: center;">
+                <img  src="icons/delete.png" width="50" height="50" alt>
+              </button>
+              <div class="btn btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> in
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off"> out
+                </label>
+              </div>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
               <h4 class="text-white">Контакты</h4>
@@ -58,86 +72,77 @@
 
     <main role="main">
       <!-- Draw circle -->
-      <div class="container screen">
-        <div class="row">
-          <div class="col-md-10">
-              <div class="card">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mb-5">
+        <div class="container screen">
+          <div class="row">
+            <div class="col-md-12">
+                <div class="card">
 
-                <div class="card-header">
-                  <h5 class="card-title">Цветовые круги</h5>
+                  <div class="card-header">
+                    <h5 class="card-title">Цветовые круги</h5>
+                  </div>
+                  <div class="card-body">
+                  <!-- Holst -->
+                  <div id="ac_style_samples-gfx-transformation-03"></div>
+                  <div id="container"></div>
+                  </div>
                 </div>
-                <div id="card-canvas" class="card-body">
-                <!-- Holst -->
-                  <canvas id="canvas" width="800" height="600" resize>
-                </div>
-              </div>
-          </div>
-          <div class="col-md-2">
-            <aside class="sidebar sidebar-sticky">
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> in
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> out
-                </label>
-              </div>
-            </aside>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container colors">
-        <div class="row">
+        <div class="container colors">
+          <div class="row">
 
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors blue_light" onclick="addCir('#337ab7')"></button>
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors blue_light" onclick="addCir('#337ab7')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors purple" onclick="addCir('#d541ff')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors citrus" onclick="addCir('#a4ff3f')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors green" onclick="addCir('#01d94c')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors brown" onclick="addCir('#9f4b1e')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors black" onclick="addCir('#101010')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors orange" onclick="addCir('#fa7d0f')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors red" onclick="addCir('#f50a0c')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors light_red" onclick="addCir('#ff8cd3')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors white" onclick="addCir('#ffffff')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors light_yellow" onclick="addCir('#fdff31')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors dark_blue" onclick="addCir('#0001fc')"></button>
+            </div>
+
           </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors purple" onclick="addCir('#d541ff')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors citrus" onclick="addCir('#a4ff3f')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors green" onclick="addCir('#01d94c')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors brown" onclick="addCir('#9f4b1e')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors black" onclick="addCir('#101010')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors orange" onclick="addCir('#ff9228')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors red" onclick="addCir('#f50a0c')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors light_red" onclick="addCir('#ff8cd3')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors yellow" onclick="addCir('#f0d427')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors light_yellow" onclick="addCir('#fdff31')"></button>
-          </div>
-
-          <div class="col-lg-1 col-sm-1">
-            <button type="button" class="btn_colors light_pink" onclick="addCir('#ffc0cc')"></button>
-          </div>
-
         </div>
       </div>
     </main>
