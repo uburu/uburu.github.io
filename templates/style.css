@@ -71,7 +71,7 @@ canvas[resize] {
 }
 
 .orange {
-  background-color: #ff9228;
+  background-color: #fa7d0f;
 }
 
 .red {
@@ -82,14 +82,23 @@ canvas[resize] {
   background-color: #ff8cd3;
 }
 
-.yellow {
-  background-color: #f0d427;
+.white {
+  background-color: #ffffff;
+  border: 1px solid black;
 }
 
 .light_yellow {
   background-color: #fdff31;
 }
       
-.light_pink {
-  background-color: #ffc0cc;
+.dark_blue {
+  background-color: #0001fc;
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -20px;
 }
