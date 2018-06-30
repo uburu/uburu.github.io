@@ -40,6 +40,12 @@
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option3" autocomplete="off"> out
                 </label>
+                <label class="btn btn-secondary">
+                  <button type="button" id="option3" onclick="delCir('#337ab7')"> del </button>
+                </label>
+<!--                 <label class="btn btn-secondary">
+                  <a href="" name="canvas" type="button" onclick="save_image()">Save as png</a>
+                </label> -->
               </div>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
@@ -87,7 +93,7 @@
                   <div id="container"></div>
                     <canvas id="canvas" width="800" height="600" resize>
                   </div>
-                </div>
+                  </div>               
             </div>
           </div>
         </div>
@@ -169,7 +175,14 @@
     <!-- <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script> -->
     <script type="text/javascript" src="templates/paper-full.js"></script>
     <script type="text/javascript" src="templates/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="templates/FileSaver.js"></script> -->
     <script src="templates/circle.js"></script>
+
+<!--     <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/597b6cd0207ce408a6d34890b5b2826b13450714/demo/demo.js"/>
+ -->
 
  </body>
 
