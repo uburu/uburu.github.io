@@ -45,12 +45,29 @@ function draw_in_circles(colours) {
   }
 }
 
+// победный вариант
+var button = document.getElementById('save');
+function save_image(e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+}
 
-// var button = document.getElementById('btn-download');
-// button.addEventListener('click', function(e) {
-//     var dataURL = canvas.toDataURL('image/png');
-//     button.href = dataURL;
-// });
+// canvas_save = document.getElementById("canvas-options");
+
+// canvas_save.addEventListener("submit", function(event) {
+//   event.preventDefault();
+//   paper.view.element.toBlobHD(function(blob) {
+//       saveAs(blob, "image.png");
+//   }, "image/png");
+// }, false);
+
+
+// function save_image(event) {
+//   ctx = paper.view.element.getContext("2d");
+//   paper.view.element.toBlobHD(function(blob) {
+//       saveAs(blob, "image.png");
+//   }, "image/png");
+// }
 
 // function ExampleCtrl(FileSaver, Blob) {
 //   var vm = this;
@@ -72,12 +89,12 @@ function draw_in_circles(colours) {
 //         saveAs(blob, imageName+"."+format);
 //     });
 // }
-function save_image() {
-  var canvas = document.getElementsByName("canvas");
-  canvas.toBlob(function(blob) {
-      saveAs(blob, "pretty image.png");
-  });
-}
+// function save_image() {
+//   var canvas = document.getElementsByName("canvas");
+//   canvas.toBlob(function(blob) {
+//       saveAs(blob, "pretty image.png");
+//   });
+// }
 
 
 // function save_image() {
@@ -95,3 +112,4 @@ function save_image() {
 //     );
 //   }, "image/png");
 // }, false);
+

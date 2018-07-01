@@ -1,6 +1,5 @@
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -27,9 +26,10 @@
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">О приложении</h4>
               <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
-              <button class="btn" style="text-align: center;">
+              <!-- атрибут поддерживается не во всех браузерах (chrome и firefox точно поддерживается) -->
+              <a href="#" id="save" class="btn" style="text-align: center;" onclick="save_image(event)"" download="image.png">
                 <img  src="icons/save.png" width="50" height="50" alt>
-              </button>
+              </a>
               <button class="btn ml-4" style="text-align: center;">
                 <img  src="icons/delete.png" width="50" height="50" alt>
               </button>
@@ -41,7 +41,10 @@
                   <input type="radio" name="options" id="option3" autocomplete="off"> out
                 </label>
                 <label class="btn btn-secondary">
-                  <button type="button" id="option3" onclick="delCir('#337ab7')"> del </button>
+                  <button type="button" id="del" onclick="delCir()"> del </button> 
+                </label>
+                <label class="btn btn-secondary">
+                  <button type="button" id="save"> save </button>
                 </label>
 <!--                 <label class="btn btn-secondary">
                   <a href="" name="canvas" type="button" onclick="save_image()">Save as png</a>
@@ -91,7 +94,7 @@
                   <!-- Holst -->
                   <div id="ac_style_samples-gfx-transformation-03"></div>
                   <div id="container"></div>
-                    <canvas id="canvas" width="800" height="600" resize>
+                    <canvas id="canvas" width="800" height="600" resize></canvas>
                   </div>
                   </div>               
             </div>
@@ -175,13 +178,14 @@
     <!-- <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script> -->
     <script type="text/javascript" src="templates/paper-full.js"></script>
     <script type="text/javascript" src="templates/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="templates/FileSaver.js"></script> -->
+    <script type="text/javascript" src="templates/FileSaver.js"></script>
+    <script type="text/javascript" src="templates/canvas-toBlob.js"></script> 
     <script src="templates/circle.js"></script>
 
-<!--     <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/597b6cd0207ce408a6d34890b5b2826b13450714/demo/demo.js"/>
+
+<!--     <script src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+    <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"/></script>
  -->
 
  </body>
