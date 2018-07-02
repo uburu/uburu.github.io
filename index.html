@@ -1,6 +1,5 @@
-
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -27,19 +26,21 @@
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white mb-4">Меню</h4>
               <div class="btn btn-group btn-group-toggle" data-toggle="buttons">
+                <p class="text-muted">Режим добавления кругов:</p>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> in
+                  <input type="radio" name="options" id="option2" autocomplete="off"> в центр
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off" checked="true"> out
+                  <input type="radio" name="options" id="option3" autocomplete="off" checked="true"> на периферию
                 </label>
               </div>
-              <button class="btn btn-lighter" style="text-align: center;">
-                <img  src="icons/save.png" width="50" height="50" alt>
-              </button>
               <button class="btn ml-4 btn-lighter" style="text-align: center;" onclick="delCir()">
                 <img  src="icons/delete.png" width="50" height="50" alt>
               </button>
+              <!-- атрибут поддерживается не во всех браузерах (chrome и firefox точно поддерживается) -->
+              <a href="#" id="save" class="btn" style="text-align: center;" onclick="save_image(event)"" download="image.png">
+                <img  src="icons/save.png" width="50" height="50" alt>
+              </a>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
               <h4 class="text-white">Контакты</h4>
@@ -84,7 +85,7 @@
                   <!-- Holst -->
                   <div id="ac_style_samples-gfx-transformation-03"></div>
                   <div id="container"></div>
-                    <canvas id="canvas" width="800" height="600" resize>
+                    <canvas id="canvas" width="800" height="600" resize></canvas>
                   </div>
                   </div>               
             </div>
@@ -164,6 +165,8 @@
     <!-- Circle draw core -->
     <script type="text/javascript" src="templates/paper-full.js"></script>
     <script type="text/javascript" src="templates/jquery.min.js"></script>
+    <script type="text/javascript" src="templates/FileSaver.js"></script>
+    <script type="text/javascript" src="templates/canvas-toBlob.js"></script> 
     <script src="templates/circle.js"></script>
 
  </body>
