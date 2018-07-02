@@ -25,34 +25,27 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">О приложении</h4>
-              <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
-              <button class="btn" style="text-align: center;">
-                <img  src="icons/save.png" width="50" height="50" alt>
-              </button>
-              <button class="btn ml-4" style="text-align: center;">
-                <img  src="icons/delete.png" width="50" height="50" alt>
-              </button>
+              <h4 class="text-white mb-4">Меню</h4>
               <div class="btn btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary">
                   <input type="radio" name="options" id="option2" autocomplete="off"> in
                 </label>
                 <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> out
+                  <input type="radio" name="options" id="option3" autocomplete="off" checked="true"> out
                 </label>
-                <label class="btn btn-secondary">
-                  <button type="button" id="option3" onclick="delCir('#337ab7')"> del </button>
-                </label>
-<!--                 <label class="btn btn-secondary">
-                  <a href="" name="canvas" type="button" onclick="save_image()">Save as png</a>
-                </label> -->
               </div>
+              <button class="btn btn-lighter" style="text-align: center;">
+                <img  src="icons/save.png" width="50" height="50" alt>
+              </button>
+              <button class="btn ml-4 btn-lighter" style="text-align: center;" onclick="delCir()">
+                <img  src="icons/delete.png" width="50" height="50" alt>
+              </button>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
               <h4 class="text-white">Контакты</h4>
               <ul class="list-unstyled">
                 <li><a href="http://www.systematismart.com/" class="text-white">сайт Систематизма</a></li>
-                <li><a href="https://vk.com/id81788584" class="text-white">Разработчик</a></li>
+                <li><a href="http://www.uburu.ru" class="text-white">Разработчик</a></li>
               </ul>
             </div>
           </div>
@@ -156,9 +149,6 @@
 
     <footer class="text-muted">
       <div class="container">
-        <p class="float-right">
-          <a href="#">Наверх</a>
-        </p>
         <p>Цветовые круги систематизма</p>
         <p>Более подробную информацию и работы вы сможете можете найти на <a href="http://www.systematismart.com/">сайте</a>.</p>
       </div>
@@ -172,17 +162,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Circle draw core -->
-    <!-- <script src="https://cdn.anychart.com/releases/8.1.0/js/graphics.min.js"></script> -->
     <script type="text/javascript" src="templates/paper-full.js"></script>
     <script type="text/javascript" src="templates/jquery.min.js"></script>
-    <!-- <script type="text/javascript" src="templates/FileSaver.js"></script> -->
     <script src="templates/circle.js"></script>
-
-<!--     <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/0cef2746414269b16834878a8abc52eb9d53e6bd/Blob.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"/>
-    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/597b6cd0207ce408a6d34890b5b2826b13450714/demo/demo.js"/>
- -->
 
  </body>
 
