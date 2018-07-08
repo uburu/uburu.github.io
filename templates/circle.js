@@ -5,12 +5,12 @@ function addCir(colour)
   if(option[0].checked)
   {
     colours.push(colour);
-    draw_in_circles(colours);
+    draw_circles(colours);
   }
   else if(option[1].checked)
   {
     colours.unshift(colour);
-    draw_in_circles(colours);
+    draw_circles(colours);
   }
 }
 
@@ -20,37 +20,54 @@ function delCir()
   if(option[0].checked)
   {
     colours.pop();
-    draw_in_circles(colours);
+    draw_circles(colours);
   }
   else if(option[1].checked)
   {
     colours.shift();
-    draw_in_circles(colours);
+    draw_circles(colours);
   }
 }
 
-paper.install(window);
-paper.setup("canvas");
-var max_radius = $("#canvas").width()/3;
-var x_center = $("#canvas").width()/2;
-var y_center = $("#canvas").height()/2;
 
-function draw_in_circles(colours) {
+var width = $("#holder").width();
+var height = $("#holder").height();
+
+var max_radius = height / 2;
+var x_center = width / 2;
+var y_center = height / 2;
+
+var paper = Raphael("holder", width, height);
+paper.setViewBox(0, 0, width, height); // viewbox - задает область которая должна масштабироваться
+
+// Атрибут preserveAspectRatio позволяет определить выравнивание отмасштабированного изображения относительно области просмотра.
+// вот тут можно посмотреть пример http://xiper.net/learn/svg/svg-essentials/preserving-aspect-ratio
+paper.canvas.setAttribute('preserveAspectRatio', 'xMinYMin meet');  
+
+// убираем стандартные параметры размеров
+paper.canvas.removeAttribute('width');
+paper.canvas.removeAttribute('height');
+
+function draw_circles(colours) {
+  paper.clear();
   amount_circles = colours.length;
   for (i = 0; i < amount_circles; i++){
-    var circle = new paper.Path.Circle(new Point(x_center, y_center), 
-      max_radius * ((amount_circles - i) / amount_circles));
-    circle.fillColor = colours[i];
-    circle.strokeWidth = 0;
+    var circle = paper.circle(x_center, y_center, max_radius * ((amount_circles - i) / amount_circles));
+    circle.attr("fill", colours[i]);
+    circle.attr("stroke-width", 0);
   }
 }
 
 // победный вариант
 var button = document.getElementById('save');
 function save_image(e) {
-    var dataURL = canvas.toDataURL('image/png');
+    var dataURL = canvas.toDataURL('image/jpeg');
     button.href = dataURL;
 }
+
+// function clear_canvas(){
+//   paper.project.activeLayer.removeChildren();
+// }
 
 // canvas_save = document.getElementById("canvas-options");
 
