@@ -27,7 +27,7 @@
               <h4 class="text-white">О приложении</h4>
               <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
               <!-- атрибут поддерживается не во всех браузерах (chrome и firefox точно поддерживается) -->
-              <a href="#" id="save" class="btn" style="text-align: center;" onclick="save_image(event)" download="image.jpg">
+              <a href="#" id="save" class="btn" style="text-align: center;">
                 <img  src="icons/save.png" width="50" height="50" alt>
               </a>
               <button class="btn ml-4" style="text-align: center;">
@@ -43,12 +43,6 @@
                 <label class="btn btn-secondary">
                   <button type="button" id="del" onclick="delCir()"> del </button> 
                 </label>
-                <label class="btn btn-secondary">
-                  <button type="button" id="save"> save </button>
-                </label>
-<!--                 <label class="btn btn-secondary">
-                  <a href="" name="canvas" type="button" onclick="save_image()">Save as png</a>
-                </label> -->
               </div>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
@@ -90,8 +84,8 @@
                   <h5>Цветовые круги</h5>
                 </div>
                 <div class="card-body">
-                <!-- Holst -->
-                  <div id="holder">
+                <!-- Holst сюда автоматически вставляется svg-шка, этот див оч(!) важный -->
+                  <div id="holder"> 
                   </div>
                 </div>
               </div>               
@@ -173,11 +167,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Circle draw core -->
-    <script type="text/javascript" src="templates/paper-full.js"></script>
+    <script type="text/javascript" src="templates/FileSaver.js"></script>
     <script type="text/javascript" src="templates/jquery.min.js"></script>
     <script type="text/javascript" src="templates/raphael.min.js"></script> 
+    <script type="text/javascript" src="templates/canvg.min.js"></script>
     <script src="templates/circle.js"></script>
 
- </body>
+ </body>  
 
 </html>

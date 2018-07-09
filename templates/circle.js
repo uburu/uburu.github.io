@@ -1,42 +1,12 @@
-colours = [];
-function addCir(colour)
-{
-  var option = document.getElementsByName("options");
-  if(option[0].checked)
-  {
-    colours.push(colour);
-    draw_circles(colours);
-  }
-  else if(option[1].checked)
-  {
-    colours.unshift(colour);
-    draw_circles(colours);
-  }
-}
-
-function delCir()
-{
-  var option = document.getElementsByName("options");
-  if(option[0].checked)
-  {
-    colours.pop();
-    draw_circles(colours);
-  }
-  else if(option[1].checked)
-  {
-    colours.shift();
-    draw_circles(colours);
-  }
-}
-
-
+// размеры рабочей области
 var width = $("#holder").width();
 var height = $("#holder").height();
 
-var max_radius = height / 2;
+var max_radius = width / 2.8;
 var x_center = width / 2;
 var y_center = height / 2;
 
+// создали холст
 var paper = Raphael("holder", width, height);
 paper.setViewBox(0, 0, width, height); // viewbox - задает область которая должна масштабироваться
 
@@ -58,15 +28,77 @@ function draw_circles(colours) {
   }
 }
 
-// победный вариант
-var button = document.getElementById('save');
-function save_image(e) {
-    var dataURL = canvas.toDataURL('image/jpeg');
-    button.href = dataURL;
+// сохранение
+document.getElementById('save').addEventListener('click', function (e) {
+  e.preventDefault();
+  // из-за этой строчки не получалось получить содержимое svg потому что этого тега изначально нет, он добавляется при рендере страницы
+  // var svg = document.querySelector('svg');
+  var svg = document.getElementById("holder").innerHTML; // так работает потому что получаем содержимое div
+  var canvas = document.createElement('canvas');
+  canvas.height = height;
+  canvas.width = width;
+  // эта строчка вызывала такую ошибку 
+  // Uncaught TypeError: Cannot read property 'innerHTML' of undefined
+  //  at HTMLAnchorElement.<anonymous>
+  // canvg(canvas, svg.parentNode.innerHTML.trim());
+  canvg(canvas, svg);
+  var dataURL = canvas.toDataURL('image/png');
+  var data = atob(dataURL.substring('data:image/png;base64,'.length)),
+          asArray = new Uint8Array(data.length);
+
+  for (var i = 0, len = data.length; i < len; ++i) {
+      asArray[i] = data.charCodeAt(i);
+  }
+
+  var blob = new Blob([asArray.buffer], {type: 'image/png'});
+  saveAs(blob, 'circles.png');
+});
+
+// массив хранящий цвета каждого круга
+colours = [];
+// добавление кругов
+function addCir(colour)
+{
+  var option = document.getElementsByName("options");
+  if(option[0].checked)
+  {
+    colours.push(colour);
+    draw_circles(colours);
+  }
+  else if(option[1].checked)
+  {
+    colours.unshift(colour);
+    draw_circles(colours);
+  }
+
 }
 
-// function clear_canvas(){
-//   paper.project.activeLayer.removeChildren();
+// удаление кругов
+function delCir()
+{
+  if (colours.length == 1) // если остался один круг, то очищаем весь холст
+  {
+    paper.clear();
+  }
+  var option = document.getElementsByName("options");
+  if(option[0].checked)
+  {
+    colours.pop();
+    draw_circles(colours);
+  }
+  else if(option[1].checked)
+  {
+    colours.shift();
+    draw_circles(colours);
+  }
+}
+
+
+// победный вариант для обычной отрисовки на canvas
+// var button = document.getElementById('save');
+// function save_image(e) {
+//     var dataURL = canvas.toDataURL('image/jpeg');
+//     button.href = dataURL;
 // }
 
 // canvas_save = document.getElementById("canvas-options");

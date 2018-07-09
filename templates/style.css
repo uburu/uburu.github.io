@@ -36,9 +36,10 @@ svg[resize] {
     height: 100%;
 }
 
-#card-canvas {
+.zero-padding {
   padding: 0;
 }
+
 
 .anychart-embed-samples-gfx-transformation-03 {
   display: none;
