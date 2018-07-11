@@ -1,3 +1,9 @@
+#holder {
+    width: 100%;
+    height: 630px;
+}
+
+
 .screen {
   text-align: center;
   margin-top: 30px;
@@ -25,14 +31,15 @@
 }
 
 
-canvas[resize] {
+svg[resize] {
     width: 100%;
     height: 100%;
 }
 
-#card-canvas {
+.zero-padding {
   padding: 0;
 }
+
 
 .anychart-embed-samples-gfx-transformation-03 {
   display: none;
