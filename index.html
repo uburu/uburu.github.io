@@ -16,10 +16,8 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">
   </head>
 
-  <body>
-    
+  <body> 
     <header>
-
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
@@ -56,9 +54,9 @@
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-            	<circle cx="12" cy="13" r="2"/>
-            	<circle cx="12" cy="13" r="6"/>
-            	<circle cx="12" cy="13" r="10"/>
+              <circle cx="12" cy="13" r="2"/>
+              <circle cx="12" cy="13" r="6"/>
+              <circle cx="12" cy="13" r="10"/>
             </svg>
             <strong>Circle</strong>
           </a>
@@ -74,20 +72,20 @@
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mb-5">
         <div class="container screen mb-3">
           <div class="row">
-            <div class="col-md-8 col-lg-8 mx-auto">
-                <div class="card">
-                  <div class="card-body">
-                  <!-- Holst -->
-                  <div id="ac_style_samples-gfx-transformation-03"></div>
-                  <div id="container"></div>
-                    <canvas id="canvas" width="800" height="600" resize></canvas>
+            <div class="col-md-8 col-lg-10 mx-auto">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Цветовые круги</h5>
+                </div>
+                <div class="card-body">
+                <!-- Holst сюда автоматически вставляется svg-шка, этот див оч(!) важный-->
+                  <div id="holder"> 
                   </div>
                 </div>
               </div>               
             </div>
           </div>
         </div>
-
         <div class="container colors">
           <div class="row">
 
@@ -169,5 +167,3 @@
     <script src="templates/circle.js"></script>
 
  </body>  
-
-</html>
