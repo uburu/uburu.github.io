@@ -17,39 +17,36 @@
   </head>
 
   <body>
-
+    
     <header>
 
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">О приложении</h4>
-              <p class="text-muted">Подробное описание приложения. Желательно в несколько предложений</p>
+              <h4 class="text-white mb-4">Меню</h4>
+              <div class="btn btn-group btn-group-toggle" data-toggle="buttons">
+                <p class="text-muted">Режим добавления кругов:</p>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> в центр
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option3" autocomplete="off" checked="true"> на периферию
+                </label>
+              </div>
+              <button class="btn ml-4 btn-lighter" style="text-align: center;" onclick="delCir()">
+                <img  src="icons/delete.png" width="50" height="50" alt>
+              </button>
               <!-- атрибут поддерживается не во всех браузерах (chrome и firefox точно поддерживается) -->
               <a href="#" id="save" class="btn" style="text-align: center;">
                 <img  src="icons/save.png" width="50" height="50" alt>
               </a>
-              <button class="btn ml-4" style="text-align: center;">
-                <img  src="icons/delete.png" width="50" height="50" alt>
-              </button>
-              <div class="btn btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> in
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> out
-                </label>
-                <label class="btn btn-secondary">
-                  <button type="button" id="del" onclick="delCir()"> del </button> 
-                </label>
-              </div>
             </div>
             <div class="col-sm-3 offset-md-1 py-4">
               <h4 class="text-white">Контакты</h4>
               <ul class="list-unstyled">
                 <li><a href="http://www.systematismart.com/" class="text-white">сайт Систематизма</a></li>
-                <li><a href="https://vk.com/id81788584" class="text-white">Разработчик</a></li>
+                <li><a href="http://www.uburu.ru" class="text-white">Разработчик</a></li>
               </ul>
             </div>
           </div>
@@ -70,7 +67,6 @@
           </button>
         </div>
       </div>
-
     </header>
 
     <main role="main">
@@ -78,14 +74,13 @@
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mb-5">
         <div class="container screen mb-3">
           <div class="row">
-            <div class="col-md-8 col-lg-10 mx-auto">
-              <div class="card">
-                <div class="card-header">
-                  <h5>Цветовые круги</h5>
-                </div>
-                <div class="card-body">
-                <!-- Holst сюда автоматически вставляется svg-шка, этот див оч(!) важный -->
-                  <div id="holder"> 
+            <div class="col-md-8 col-lg-8 mx-auto">
+                <div class="card">
+                  <div class="card-body">
+                  <!-- Holst -->
+                  <div id="ac_style_samples-gfx-transformation-03"></div>
+                  <div id="container"></div>
+                    <canvas id="canvas" width="800" height="600" resize></canvas>
                   </div>
                 </div>
               </div>               
@@ -97,6 +92,34 @@
           <div class="row">
 
             <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors white" onclick="addCir('#ffffff')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors red" onclick="addCir('#f50a0c')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors orange" onclick="addCir('#fa7d0f')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors light_yellow" onclick="addCir('#fdff31')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors green" onclick="addCir('#01d94c')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors citrus" onclick="addCir('#a4ff3f')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
+              <button type="button" class="btn_colors dark_blue" onclick="addCir('#0001fc')"></button>
+            </div>
+
+            <div class="col-lg-1 col-sm-1">
               <button type="button" class="btn_colors blue_light" onclick="addCir('#337ab7')"></button>
             </div>
 
@@ -105,11 +128,7 @@
             </div>
 
             <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors citrus" onclick="addCir('#a4ff3f')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors green" onclick="addCir('#01d94c')"></button>
+              <button type="button" class="btn_colors light_red" onclick="addCir('#ff8cd3')"></button>
             </div>
 
             <div class="col-lg-1 col-sm-1">
@@ -118,30 +137,6 @@
 
             <div class="col-lg-1 col-sm-1">
               <button type="button" class="btn_colors black" onclick="addCir('#101010')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors orange" onclick="addCir('#fa7d0f')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors red" onclick="addCir('#f50a0c')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors light_red" onclick="addCir('#ff8cd3')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors white" onclick="addCir('#ffffff')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors light_yellow" onclick="addCir('#fdff31')"></button>
-            </div>
-
-            <div class="col-lg-1 col-sm-1">
-              <button type="button" class="btn_colors dark_blue" onclick="addCir('#0001fc')"></button>
             </div>
 
           </div>
